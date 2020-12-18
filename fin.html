@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- JQuery  -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Horizontal-Floating-Social-Share-Bar/js/jquery.floating-share.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+
+<body>
+
+<script src="js/jquery.floating-share.js" type="text/javascript"></script>
+
+
+  <nav class="deep-orange accent-1" role="navigation">
+    <div class="nav-wrapper container"><img src="comida.svg" width="65" height="65"/><a id="logo-container" href="" class="brand-logo"></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="#">Tabla Nutricional</a></li>
+      </ul>
+
+      </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h3 class="header center brown-text text-darken-1">Resultado</h3>
+        <div class="row center"></div>
+
+        
+        <table class="highlight centered" >
+          <thead>
+            <tr>
+                <th id="alimento">Alimento</th>
+                <th id="calorias">Calorías(kCal)</th>
+                <th id="grasas">Grasas(g)</th>
+                <th id="proteina">Proteína(g)</th>
+                <th id="carbohidratos">Carbohidratos(g)</th>
+                <th id="ok">Ok</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>Arándano</td> <td id = "calorias"> valor</td> <td id = "grasas">valor</td> <td id = "proteina"> valor</td> <td id = "carbohidratos">valor</td> <td><img src="happy.png" width="30" height="30"/></td>
+            </tr>
+          </tbody>
+        </table>
+    
+    
+            <script type="text/javascript">
+    
+              const queryString = window.location.search;
+              const urlParams = new URLSearchParams(queryString);
+              const alimento = urlParams.get('alimento')
+              var estado = urlParams.get('image')
+              const calorias = urlParams.get('calorias')
+              const grasas = urlParams.get('grasas')
+              const proteina = urlParams.get('proteina')
+              const carbohidratos = urlParams.get('carbohidratos')
+    
+    
+              document.getElementById("alimento").innerHTML = alimento;
+              document.getElementById("calorias").innerHTML = calorias;
+              document.getElementById("grasas").innerHTML = grasas;
+              document.getElementById("proteina").innerHTML = proteina;
+              document.getElementById("carbohidratos").innerHTML = carbohidratos;
+    
+    
+    
+            </script>
+
+
+
+
+  </body>
+</html>
