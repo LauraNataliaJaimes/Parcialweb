@@ -43,21 +43,12 @@ function reset(){
     window.location.reload();
   }
   
-  function getV(id){
-    return document.getElementById(id).value
+  function getform(id){
+    return document.getElementById('form').value
   }
   
-  function getLista(id){
-    var lista = document.getElementById(id);
-    // Obtener el valor de la opción seleccionada
+  function getlist(id){
+    var lista = document.getElementById('form');
     var valorSeleccionado = lista.options[lista.selectedIndex].value;
-    // Obtener el texto que muestra la opción seleccionada
     return lista.options[lista.selectedIndex].text;
-  }
-  
-  function submit(){
-    const str1 = 'fin.html?alimento=';
-    var enlace = str1.concat(getV("alimento"),'&calorias=',getV("calori"),'&grasas=',getV("grasas"),'&proteina=',getV("proteina"),'&carbohidratos=',getV("carbohidratos"),'&image=',getLista("ok"));
-  //  window.location.href = "recibido.html?alimento=alimento&calorias=48&grasas=0.3&proteina=0.4&carbohidratos=12.7&image=ok"
-    window.location.href = enlace;
   }
