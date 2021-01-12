@@ -26,29 +26,34 @@ function editar(nodo){
         '<td><input type="text" name="grasas" id="grasas" value="'+grasas+'" size="3"></td>'+
         '<td><input type="text" name="proteina" id="proteina" value="'+proteina+'" size="3"></td>'+
         '<td><input type="text" name="carbohidratos" id="carbohidratos" value="'+carbohidratos+'" size="3"></td>' + 
-        '<td><input type="select" name="ok" id="ok" value="'+ok+'" size="5"></td> <td>En edición</td>';
+        '<td><select id="ok" class="icons"><option value="0" disabled selected>Seleecione una opcion</option><option value="1" data-icon="happy.png">Bien</option><option value="2" data-icon="Sad.png">Mal</option></select></td>' + 
+        '<td>En edición</td>';
 
-        nodoBody.innerHTML = nuevo;
-        nodoBody.innerHTML = ((nodoHead.parentNode).parentNode).parentNode;
 
-        nodoForm.innerHTML = '<p class="row right">Pulse Aceptar para guardar los cambios o cancelar para anularlos</p>'+
-        '<p button type="submit" class="waves-effect waves-light btn-small row right" onclick="submit()">Aceptar</button></p> '+'<p button type="reset" class="waves-effect waves-light btn-small row right" onclick="reset()">Cancelar</button></p>';
-     }
+        nodoBody.innerHTML = nuevo; //Se almacenan los nuevos cambios en la tabla
 
+
+        //Botones para Aceotar o Cancelar los cambios hechos en la tabla
+        nodoForm.innerHTML = '<p style="text-align: right">Pulse ACEPTAR para guardar los cambios o CANCELAR para anularlos.</p>'+
+        '<button type="submit" class="waves-effect waves-light btn-small text-align: right" onclick = "reset()"> Cancelar </button>' + 
+        '<button type="submit" class="waves-effect waves-light btn-small text-align: right" style="margin-right: 15px" onclick = "submit()"> Aceptar </button>';
+        }
+
+        //Alerta de cuando se quiera editar 2 filas a la vez
         else {alert ('Solo se puede editar una línea. Recargue la página para poder editar otra');
     }
 }
 
 function reset(){
-    window.location.reload();
+    window.location.reload(); //Recarga la página al oprimir la opción CANCELAR
+  }
+
+  function get(id){ 
+    return document.getElementById(id).value //Recoge el ID de cada valor modificado
   }
   
-  function getform(id){
-    return document.getElementById('form').value
-  }
-  
-  function getlist(id){
-    var lista = document.getElementById('form');
-    var valorSeleccionado = lista.options[lista.selectedIndex].value;
-    return lista.options[lista.selectedIndex].text;
+  function submit(){
+    const str = 'fin.html?alimento='; //URL del nuevo sitio y concatena los valores que recogió del GET 
+    var enlace = str.concat(get("alimento"),'&calorias=',get("calorias"),'&grasas=',get("grasas"),'&proteina=',get("proteina"),'&carbohidratos=',get("carbohidratos"));
+    window.location.href = enlace;
   }

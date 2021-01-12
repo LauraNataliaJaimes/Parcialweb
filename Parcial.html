@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+
   <!-- JQuery  -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Horizontal-Floating-Social-Share-Bar/js/jquery.floating-share.js" type="text/javascript"></script>
@@ -16,30 +17,41 @@ $(document).ready(function(){
 });
 </script>
 
+
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
-  <title>Starter Template - Materialize</title>
+
+  <!--  Title-->
+  <title>PARCIAL</title>
+
+
+  <!--  Javascript-->
   <script type="text/javascript" src="js/parcialjs.js"></script>
+
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+
 </head>
 
-<body>
 
+
+<body>
 <script src="js/jquery.floating-share.js" type="text/javascript"></script>
 
 
-  <nav class="teal lighten-3" role="navigation">
+
+  <nav class="green lighten-2" role="navigation">
     <div class="nav-wrapper container"><img src="comida.svg" width="65" height="65"/><a id="logo-container" href="" class="brand-logo"></a>
       <ul class="left hide-on-med-and-down">
         <li><a href="#">Tabla Nutricional</a></li>
@@ -58,10 +70,10 @@ $(document).ready(function(){
           <thead>
             <tr>
                 <th>Alimento</th>
-                <th>Calorías(kCal)</th>
-                <th>Grasas(g)</th>
-                <th>Proteína(g)</th>
-                <th>Carbohidratos(g)</th>
+                <th>Calorías (kCal)</th>
+                <th>Grasas (g)</th>
+                <th>Proteína (g)</th>
+                <th>Carbohidratos (g)</th>
                 <th>Ok</th>
                 <th>Opciones</th>
             </tr>
@@ -69,25 +81,25 @@ $(document).ready(function(){
   
           <tbody>
             <tr>
-              <td>Arándano</td> <td>49</td> <td>0.2</td><td>0.4</td> <td>12.7</td> <td><img src="happy.png" width="30" height="30"/></td>
-              <td><span class="editar blue-text text-accent-4" onclick="editar(this)">Editar</span></td>
+              <td>Arándano</td> <td>49</td> <td>0.2</td><td>0.4</td> <td>12.7</td> <td><img src="happy.png" id="ok" width="30" height="30"/></td>
+              <td><span class="editar deep-orange-text text-lighten-2" onclick="editar(this)">Editar</span></td>
             </tr>
             <tr>
               <td>Plátano</td> <td>90</td> <td>0.3</td> <td>1.0</td> <td>23.5</td> <td><img src="dead.png" width="27" height="27"/></td>
-              <td><span class="editar blue-text text-accent-4" onclick="editar(this)">Editar</span></td>
+              <td><span class="editar deep-orange-text text-lighten-2" onclick="editar(this)">Editar</span></td>
             </tr>
             <tr>
               <td>Cereza</td> <td>46</td> <td>0.4</td> <td>0.9</td> <td>10.9</td> <td><img src="dead.png" width="27" height="27"/></td>
-              <td><span class="editar blue-text text-accent-4" onclick="editar(this)">Editar</span></td>
+              <td><span class="editar deep-orange-text text-lighten-2" onclick="editar(this)">Editar</span></td>
             </tr>
             <tr>
               <td>Fresa</td> <td>37</td> <td>0.5</td> <td>0.8</td> <td>8.3</td> <td><img src="happy.png" width="30" height="30"/></td>
-              <td><span class="editar blue-text text-accent-4" onclick="editar(this)">Editar</span></td>
+              <td><span class="editar deep-orange-text text-lighten-2" onclick="editar(this)">Editar</span></td>
             </tr>
           </tbody>
         </table>
         <p class="row left">Contenido nutricional por cada 100 g de Alimentos.</p>
-        <div id="Form">
+        <div id="Form"></div>
         </div>
       </div>
     </br></br>

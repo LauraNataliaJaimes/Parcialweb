@@ -15,7 +15,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 
-  <title>Starter Template - Materialize</title>
+  <title>FIN</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,6 +27,7 @@
 <body>
 
 <script src="js/jquery.floating-share.js" type="text/javascript"></script>
+
 
 
   <nav class="deep-orange accent-1" role="navigation">
@@ -43,36 +44,29 @@
       <h3 class="header center brown-text text-darken-1">Resultado</h3>
         <div class="row center"></div>
 
-        
+
+
         <table class="highlight centered" >
           <thead>
             <tr>
-                <th id="alimento">Alimento</th>
-                <th id="calorias">Calorías(kCal)</th>
-                <th id="grasas">Grasas(g)</th>
-                <th id="proteina">Proteína(g)</th>
-                <th id="carbohidratos">Carbohidratos(g)</th>
-                <th id="ok">Ok</th>
+                <th>Alimento</th>
+                <th>Calorías(kCal)</th>
+                <th>Grasas(g)</th>
+                <th>Proteína(g)</th>
+                <th>Carbohidratos(g)</th>
+                <th>Ok</th>
             </tr>
           </thead>
   
           <tbody>
             <tr>
-              <td>Arándano</td> <td id = "calorias"> valor</td> <td id = "grasas">valor</td> <td id = "proteina"> valor</td> <td id = "carbohidratos">valor</td> <td><img src="happy.png" width="30" height="30"/></td>
+              <td id="alimento"></td> <td id = "calorias"></td> <td id = "grasas"></td> <td id = "proteina"></td> <td id = "carbohidratos"></td> <td><img src="happy.png" width="30" height="30"/></td>
             </tr>
           </tbody>
         </table>
-    
-    
-      
-            <script type="text/javascript">
-    
-              document.getElementById("alimento").innerHTML = alimento;
-              document.getElementById("calorias").innerHTML = calorias;
-              document.getElementById("grasas").innerHTML = grasas;
-              document.getElementById("proteina").innerHTML = proteina;
-              document.getElementById("carbohidratos").innerHTML = carbohidratos;
-   
-            </script>
+
+      <!--  Javascript-->
+      <script type="text/javascript" src="js/finjs.js"></script>
+
   </body>
 </html>
